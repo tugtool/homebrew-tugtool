@@ -12,18 +12,18 @@
 class Tugcode < Formula
   desc "From ideas to implementation via multi-agent orchestration"
   homepage "https://github.com/tugtool/tugtool"
-  version "0.7.10"
+  version "0.7.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tugtool/tugtool/releases/download/v#{version}/tugcode-#{version}-macos-arm64.tar.gz"
-      # SHA256 ARM64: e490b9dd973b12fea0a1698656d48f43191a84ab22eccbd0d65172adfbfed590
-      sha256 "e490b9dd973b12fea0a1698656d48f43191a84ab22eccbd0d65172adfbfed590"
+      # SHA256 ARM64: 79f13d98720430edacfb6cd8250079ce000c634427979e014a3315acad637fd4
+      sha256 "79f13d98720430edacfb6cd8250079ce000c634427979e014a3315acad637fd4"
     else
       url "https://github.com/tugtool/tugtool/releases/download/v#{version}/tugcode-#{version}-macos-x86_64.tar.gz"
-      # SHA256 X86_64: ad4a3839c6835fdfb6b244c24cc64dfa46a78311247505482f4463c490429a3f
-      sha256 "ad4a3839c6835fdfb6b244c24cc64dfa46a78311247505482f4463c490429a3f"
+      # SHA256 X86_64: e141802291c64f925fcf74af62977cf346e7459d4495261516a70bb1e9ea5968
+      sha256 "e141802291c64f925fcf74af62977cf346e7459d4495261516a70bb1e9ea5968"
     end
   end
 
