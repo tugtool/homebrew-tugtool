@@ -12,23 +12,24 @@
 class Tugcode < Formula
   desc "From ideas to implementation via multi-agent orchestration"
   homepage "https://github.com/tugtool/tugtool"
-  version "0.7.31"
+  version "0.7.33"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/tugtool/tugtool/releases/download/v#{version}/tugcode-#{version}-macos-arm64.tar.gz"
-      # SHA256 ARM64: c8101d81f6652a1a16610d6e185bfb93db0918c3cce4d044383b2c411a43a237
-      sha256 "c8101d81f6652a1a16610d6e185bfb93db0918c3cce4d044383b2c411a43a237"
+      # SHA256 ARM64: 48f8307b87c0808529fbc887ca9629b854c97bca97da6155c376305da2563ab2
+      sha256 "48f8307b87c0808529fbc887ca9629b854c97bca97da6155c376305da2563ab2"
     else
       url "https://github.com/tugtool/tugtool/releases/download/v#{version}/tugcode-#{version}-macos-x86_64.tar.gz"
-      # SHA256 X86_64: 96dc081a72cb54e285c88ba0ee9bb9b0738ba4f16782a197eeeec526b6e6a10e
-      sha256 "96dc081a72cb54e285c88ba0ee9bb9b0738ba4f16782a197eeeec526b6e6a10e"
+      # SHA256 X86_64: 0602009555f955140a370483ae77c9dfb5c8bdf28614f1e219a0f744842753fd
+      sha256 "0602009555f955140a370483ae77c9dfb5c8bdf28614f1e219a0f744842753fd"
     end
   end
 
   def install
     bin.install "bin/tugcode"
+    bin.install "bin/tugbank"
 
     # Install skills to share directory
     # Skills end up at #{HOMEBREW_PREFIX}/share/tugplug/skills/
